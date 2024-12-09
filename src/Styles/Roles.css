@@ -1,0 +1,296 @@
+/* Roles.css */
+.roles-container {
+  margin-left: 260px;
+  padding: 20px;
+  background-color: #F4F4F4;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.roles-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.roles-header h2 {
+  color: #4CAF50;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.role-card {
+  background-color: #FFF;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.role-card:hover {
+  border-color: #4CAF50;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.add-role-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-role-btn:hover {
+  background-color: #0f6912;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #F9F9F9;
+}
+
+table tr:hover {
+  background-color: #E0F7FA;
+}
+
+.edit-btn, .delete-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  background-color: #F44336;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* CSS for the modal form */
+.role-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.role-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 50px;
+}
+
+.role-form button:hover {
+  background-color: #45a049;
+}
+
+.close-btn {
+  background-color: #F44336;
+}
+
+.close-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Styles for the dropdown and custom input fields */
+.dropdown {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.custom-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.custom-input:focus,
+.dropdown:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.search-bar {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.search-bar svg {
+  cursor: pointer;
+  fill: #4CAF50;
+}
+
+.no-results-roles {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .roles-container {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .roles-header {
+    margin-top: 30px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .add-role-btn {
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+
+  table th, table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  table {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .role-form {
+    width: 50%;
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .custom-input, .dropdown {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .role-form button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+/* Media Query for Screens ≤ 420px */
+@media screen and (max-width: 420px) {
+  .roles-container {
+    padding: 5px;
+  }
+
+  .roles-header h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .add-role-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  table th, table td {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .search-bar {
+    gap: 4px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .role-form {
+    width: 50%;
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .custom-input, .dropdown {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .role-form button {
+    font-size: 12px;
+    padding: 6px 10px;
+    margin-right: 5px;
+  }
+
+  .close-btn {
+    font-size: 12px;
+  }
+}

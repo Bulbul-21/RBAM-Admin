@@ -1,0 +1,305 @@
+/* Container for the Users Page */
+.users-container {
+  margin-left: 260px;
+  padding: 20px;
+  background-color: #F4F4F4;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Header section for the Users Page */
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Header title */
+.users-header h2 {
+  color: #4CAF50;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Add User button */
+.users-header button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.users-header button:hover {
+  background-color: #0f6912;
+}
+
+/* Table container */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table headers */
+.users-table th {
+  background-color: #4CAF50;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Table rows and cells */
+.users-table td {
+  padding: 10px;
+  font-size: 14px;
+  color: #333333;
+  border-bottom: 1px solid #CCC;
+}
+
+.users-table tr:nth-child(even) {
+  background-color: #F9F9F9;
+}
+
+/* Hover effect for table rows */
+.users-table tr:hover {
+  background-color: #E0F7FA;
+}
+
+/* No border for the last row */
+.users-table tr:last-child td {
+  border-bottom: none;
+}
+
+.edit-btn, .delete-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  background-color: #F44336;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Form overlay */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Form container */
+.user-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 350px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form heading */
+.user-form h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4CAF50;
+  text-align: center;
+}
+
+/* Inputs and select boxes */
+.user-form input,
+.user-form select {
+  padding: 10px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.user-form input:focus,
+.user-form select:focus {
+  border-color: #4CAF50;
+}
+
+/* Form buttons container */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Form buttons styling */
+.add-user-btn,
+.close-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Add/Update button */
+.add-user-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.add-user-btn:hover {
+  background-color: #45A049;
+}
+
+/* Close button */
+.close-btn {
+  background-color: #F44336;
+  color: white;
+}
+
+.close-btn:hover {
+  background-color: #D32F2F;
+}
+
+.search-bar {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.search-bar svg {
+  cursor: pointer;
+  fill: #4CAF50;
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-style: italic;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .users-container {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .users-header {
+    margin-top: 30px;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+
+  .users-header h2 {
+    font-size: 20px;
+  }
+
+  .users-header button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .user-form {
+    width: 50%;
+    padding: 15px;
+  }
+
+  .form-buttons {
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .users-container {
+    padding: 5px;
+  }
+
+  .users-header {
+    align-items: center;
+  }
+
+  .users-header h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .users-header button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 6px;
+    font-size: 10px;
+  }
+
+  .user-form {
+    padding: 10px;
+  }
+
+  .user-form h3 {
+    font-size: 16px;
+  }
+
+  .user-form input,
+  .user-form select {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .form-buttons button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

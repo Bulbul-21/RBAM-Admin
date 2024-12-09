@@ -1,0 +1,120 @@
+.sidebar {
+  width: 250px;
+  background-color: #4caf50;
+  height: 100vh; /* Full viewport height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes content and logout button apart */
+  padding-left: 20px;
+  padding-top: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds spacing between elements */
+}
+
+.sidebar h2,
+.sidebar p {
+  color: #fff;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.sidebar p {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.sidebar nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-link {
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+
+.sidebar-link:hover,
+.sidebar-link.active-link {
+  background-color: #3b8d42;
+}
+
+.logout-button {
+  margin-top: auto;
+  width: calc(100% - 40px); /* Consistent width considering padding */
+  padding: 12px 16px;
+  background-color: #4caf50; /* Vibrant Red */
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between icon and text */
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.logout-button:hover {
+  background-color: #F44336; /* Darker Red */
+  transform: translateY(-3px); /* Slight hover lift */
+}
+
+.logout-icon {
+  font-size: 18px;
+}
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #3b8d42;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 1100;
+  border-radius: 5px;
+}
+
+.hamburger-menu:focus {
+  outline: none;
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
