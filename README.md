@@ -83,10 +83,11 @@ This will open the app in your default browser. The application will be availabl
 
 ---
 
-### **Login Details**
+### **Login Details (Important)**
 
-Username: Admin
-Password: admin@123
+- **Username**: Admin
+- **Password**: admin@123
+  
 Upon successful login, the Admin will have access to the user management interface.
 
 ---
