@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# **Role-Based Access Management**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React.js-based Role-Based Access Management System** that allows you to manage users, their roles, and permissions effectively. The project includes user management functionalities such as adding, editing, deleting users, toggling active/inactive statuses, and managing user roles.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Table of Contents**
 
-### `npm start`
+1. [Features](#features)  
+2. [Technologies Used](#technologies-used)  
+3. [Setup Instructions](#setup-instructions)  
+4. [Execution Steps](#execution-steps)  
+5. [Project Structure](#project-structure)  
+6. [How It Works](#how-it-works)  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **Features**
 
-### `npm test`
+1. **Login Page**: A login page with credentials for initial access (Username: Admin, Password: admin@123).  
+2. **User Management**: Add, Edit, and Delete users.  
+3. **Role Management**: Assign specific roles to users (e.g., Admin, User, etc.).  
+4. **Status Management**: Toggle between **Active** and **Inactive** status for users.  
+5. **Search Functionality**: Search users based on their details like name, email, status, and role.  
+6. **Local Storage**: User data and role management persist in the browser's local storage.  
+7. **Access Control**: Disable actions (Edit/Delete) for users marked as **Inactive**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## **Technologies Used**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: React.js  
+- **Routing**: React Router DOM  
+- **Icons**: FontAwesome  
+- **CSS**: Custom CSS for styling  
+- **State Management**: React `useState` and `useEffect` hooks  
+- **Data Persistence**: LocalStorage  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **Setup Instructions**
 
-### `npm run eject`
+To set up and run this project on your local machine, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **Prerequisites**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Node.js** (v14 or later)  
+- **npm** (Node Package Manager)  
+- **Code Editor** (e.g., VSCode)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **1. Clone the Repository**
 
-## Learn More
+```bash
+git clone https://github.com/your-username/role-based-access-management.git
+cd role-based-access-management
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
+### **2. Install Dependencies**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+After cloning the repository, navigate to the project directory:
 
-### Code Splitting
+```bash
+cd repository-name
+```
+Then install the required dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+```
 
-### Analyzing the Bundle Size
+---
+### **3. Start the Development Server**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To start the development server and view the application locally, run:
 
-### Making a Progressive Web App
+```bash
+npm start
+```
+This will open the app in your default browser. The application will be available at http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+### **Login Details**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Username: Admin
+Password: admin@123
+Upon successful login, the Admin will have access to the user management interface.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### **Usage Instructions**
 
-### `npm run build` fails to minify
+Add Users: Click on the + Add User button and fill in the user's details (name, email, role, status). Click "Add" to save.
+Edit Users: Click on the Edit button next to a user's name to modify their details.
+Delete Users: Click on the Delete button next to a user's name to remove them from the list.
+Search Users: Use the search bar to find users by name, email, or role.
+Toggle User Status: Admin can toggle user status between "Active" and "Inactive".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+### **Conclusion**
+This project demonstrates role-based access management and basic CRUD operations. You can extend this by adding more roles and permissions, integrating with a backend for persistent data storage, and adding more features as needed.
+
